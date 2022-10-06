@@ -1,0 +1,9 @@
+---
+- name: install vim-enhanced
+  hosts: prod
+  become: yes
+  tasks:
+    - name: install vim-enhanced
+      yum:
+        name: vim-enhanced
+        state: present
