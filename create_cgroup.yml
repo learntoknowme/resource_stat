@@ -1,0 +1,8 @@
+---
+- name: Create a cgroup
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: create the cgroup
+      command: cgcreate -t devops:devops -a devops:devops -g cpuacct,memory,pids:ex374_stats
+...
